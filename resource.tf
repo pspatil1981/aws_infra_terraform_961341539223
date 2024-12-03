@@ -1,8 +1,6 @@
-
 #data block
 data "aws_ami" "amazon-linux-3" {
   most_recent = true
-  owners      = ["amazon"] # Restricts to AMIs owned by Amazon
 
   filter {
     name   = "name"
@@ -24,8 +22,7 @@ data "aws_ami" "amazon-linux-3" {
   }
 }
 
-
-#argument ke value ka datatype
+#argument ke value ka datatype 
 resource "aws_instance" "myinstance" {
   ami           = data.aws_ami.amazon-linux-3.id
   instance_type = var.instance_type
@@ -38,13 +35,9 @@ resource "aws_instance" "myinstance" {
 }
 
 resource "aws_s3_bucket" "example" {
-  bucket = "my-test-bucket-1a456b"
+  bucket = "my-tf-tzxxxxxest-bucket"
 }
 
 resource "aws_s3_bucket" "example1" {
-  bucket = "mytest-bucket-12a456b"
-}
-
-resource "aws_vpc" "main" {
-  cidr_block = "10.0.0.0/16"
+  bucket = "my-tf-tzxxxxest-bucket"
 }

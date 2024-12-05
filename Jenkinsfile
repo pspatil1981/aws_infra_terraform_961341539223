@@ -54,7 +54,7 @@ pipeline {
         stage('Terraform Apply') {
             steps {
                 echo 'Terraform Apply'
-                sh 'terraform apply -var-file=terraform.tfvars -out=tfplan.txt --auto-approve'
+                sh 'terraform apply --auto-approve'
             }
         }
 	}

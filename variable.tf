@@ -15,7 +15,7 @@ variable "instance_count" {
 variable "aws_region" {
   description = "AWS region where resources will be created"
   type        = string
-  default     = "us-east-1"
+  default     = "ap-south-1a"
 }
 
 variable "vpc_cidr" {
@@ -39,7 +39,7 @@ variable "private_subnet_cidrs" {
 variable "availability_zones" {
   description = "List of availability zones for subnets"
   type        = list(string)
-  default     = ["us-east-1a", "us-east-1b"]
+  default     = ["ap-south-1a", "ap-south-1b"]
 }
 
 variable "project_name" {
